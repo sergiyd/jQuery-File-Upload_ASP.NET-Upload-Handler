@@ -275,7 +275,7 @@
                     break;
                 }
 
-                FileResponseList.Add(CreateFileDictionary(File.FileName, File.ContentLength, ErrorMessage));
+                FileResponseList.Add(CreateFileDictionary(FileName, File.ContentLength, ErrorMessage));
             }
             
             ResponseObject = FileResponseList;            

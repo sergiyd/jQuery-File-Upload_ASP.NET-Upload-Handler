@@ -244,7 +244,7 @@
                     {
                         using (Stream FileStreamWriter = new FileStream(FileName, FileMode.CreateNew, FileAccess.Write))
                         {
-                            FromStreamToStream(Request.InputStream, FileStreamWriter);
+                            FromStreamToStream(File.InputStream, FileStreamWriter);
                         }
                     }
                     catch (Exception exception)

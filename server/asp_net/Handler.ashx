@@ -268,7 +268,8 @@ public class Handler : IHttpAsyncHandler
                     {
                         using (Stream FileStreamWriter = new FileStream(FileName, FileMode.CreateNew, FileAccess.Write))
                         {
-                            FromStreamToStream(context.Request.InputStream, FileStreamWriter);
+                            var inputStream = context.Request.Files.Get(0).InputStream;
+                            FromStreamToStream(inputStream, FileStreamWriter);
                         }
                     }
                     catch (Exception exception)
